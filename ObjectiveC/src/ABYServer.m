@@ -397,12 +397,12 @@ void handleConnect (
                                               SOCK_STREAM,
                                               IPPROTO_TCP,
                                               kCFSocketAcceptCallBack, handleConnect, &socketCtxt);
-    CFSocketRef myipv6cfsock = CFSocketCreate(
-                                              kCFAllocatorDefault,
-                                              PF_INET6,
-                                              SOCK_STREAM,
-                                              IPPROTO_TCP,
-                                              kCFSocketAcceptCallBack, handleConnect, &socketCtxt);
+    //CFSocketRef myipv6cfsock = CFSocketCreate(
+     //                                         kCFAllocatorDefault,
+       //                                       PF_INET6,
+         //                                     SOCK_STREAM,
+           //                                   IPPROTO_TCP,
+             //                                 kCFSocketAcceptCallBack, handleConnect, &socketCtxt);
     
     
     struct sockaddr_in sin;
@@ -418,30 +418,41 @@ void handleConnect (
                                     (UInt8 *)&sin,
                                     sizeof(sin));
     
+   // if (0 != (err = bind(sock, (struct sockaddr *)&addr, sizeof(addr)))) {
+   //     NSLog(@"Bind error");
+   //     return false;
+   // }
+    
+    NSLog(@"ipv4");
+    
     CFSocketError sock4err = CFSocketSetAddress(myipv4cfsock, sincfd);
     CFRelease(sincfd);
     if (sock4err != kCFSocketSuccess) {
+        NSLog(@"ipv4 err");
         return NO;
     }
     
-    struct sockaddr_in6 sin6;
+    //struct sockaddr_in6 sin6;
     
-    memset(&sin6, 0, sizeof(sin6));
-    sin6.sin6_len = sizeof(sin6);
-    sin6.sin6_family = AF_INET6; /* Address family */
-    sin6.sin6_port = htons(port);
-    sin6.sin6_addr = in6addr_any;
+    //memset(&sin6, 0, sizeof(sin6));
+    //sin6.sin6_len = sizeof(sin6);
+    //sin6.sin6_family = AF_INET6; /* Address family */
+    //sin6.sin6_port = htons(port);
+    //sin6.sin6_addr = in6addr_any;
     
-    CFDataRef sin6cfd = CFDataCreate(
-                                     kCFAllocatorDefault,
-                                     (UInt8 *)&sin6,
-                                     sizeof(sin6));
+    //CFDataRef sin6cfd = CFDataCreate(
+   //                                  kCFAllocatorDefault,
+   //                                  (UInt8 *)&sin6,
+   //                                  sizeof(sin6));
     
-    CFSocketError sock6err = CFSocketSetAddress(myipv6cfsock, sin6cfd);
-    CFRelease(sin6cfd);
-    if (sock6err != kCFSocketSuccess) {
-        return NO;
-    }
+    NSLog(@"ipv6 omit");
+    
+    //CFSocketError sock6err = CFSocketSetAddress(myipv6cfsock, sin6cfd);
+    //CFRelease(sin6cfd);
+    //if (sock6err != kCFSocketSuccess) {
+    //    NSLog(@"ipv6 err");
+    //    return NO;
+    //}
     
     
     _socketsource = CFSocketCreateRunLoopSource(
@@ -454,25 +465,25 @@ void handleConnect (
                        _socketsource,
                        kCFRunLoopDefaultMode);
     
-    _socketsource6 = CFSocketCreateRunLoopSource(
-                                                                   kCFAllocatorDefault,
-                                                                   myipv6cfsock,
-                                                                   0);
+    //_socketsource6 = CFSocketCreateRunLoopSource(
+    //                                                               kCFAllocatorDefault,
+    //                                                               myipv6cfsock,
+    //                                                               0);
     
-    CFRunLoopAddSource(
-                       CFRunLoopGetCurrent(),
-                       _socketsource6,
-                       kCFRunLoopDefaultMode);
+    //CFRunLoopAddSource(
+    //                   CFRunLoopGetCurrent(),
+    //                   _socketsource6,
+     //                  kCFRunLoopDefaultMode);
     
     
     BOOL startedWebDAV = [self startWebDavWithPort:port + 1];
     
     if (!startedWebDAV) {
         // Clean up TCP
-        CFRunLoopRemoveSource(
-                              CFRunLoopGetCurrent(),
-                              _socketsource6,
-                              kCFRunLoopDefaultMode);
+        //CFRunLoopRemoveSource(
+        //                      CFRunLoopGetCurrent(),
+        //                     _socketsource6,
+        //                      kCFRunLoopDefaultMode);
         
         CFRunLoopRemoveSource(
                               CFRunLoopGetCurrent(),

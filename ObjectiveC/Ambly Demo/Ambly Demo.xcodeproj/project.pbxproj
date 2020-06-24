@@ -50,11 +50,11 @@
 		AA64223A1C28A5D7002F7170 /* Ambly Demo TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambly Demo TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA64223C1C28A8E5002F7170 /* Info-TV.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-TV.plist"; sourceTree = "<group>"; };
 		CCA0347666288A09540AE52D /* libPods-Ambly Demo TV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ambly Demo TV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED15C8A520407B7100160C69 /* Ambly Demo CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Ambly Demo CLI"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED15C8A520407B7100160C69 /* Ambly Demo CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Ambly Demo CLI"; path = ambly; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED15C8A720407B7100160C69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED15C8AC20407FA300160C69 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		ED15C8AD20407FA300160C69 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
-		ED387D191A602B56007E40A2 /* Ambly Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambly Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED387D191A602B56007E40A2 /* Kwccoin Ambly Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kwccoin Ambly Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED387D1D1A602B56007E40A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED387D1E1A602B56007E40A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED387D201A602B56007E40A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		ED387D1A1A602B56007E40A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED387D191A602B56007E40A2 /* Ambly Demo.app */,
+				ED387D191A602B56007E40A2 /* Kwccoin Ambly Demo.app */,
 				AA64223A1C28A5D7002F7170 /* Ambly Demo TV.app */,
 				ED15C8A520407B7100160C69 /* Ambly Demo CLI */,
 			);
@@ -185,8 +185,6 @@
 				AA64222B1C28A5D7002F7170 /* Sources */,
 				AA64222F1C28A5D7002F7170 /* Frameworks */,
 				AA6422311C28A5D7002F7170 /* Resources */,
-				0494E67C8978FC2D8E3B7AC7 /* [CP] Embed Pods Frameworks */,
-				456F92B224EF92B3756BA4A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,7 +203,6 @@
 				ED15C8A120407B7100160C69 /* Sources */,
 				ED15C8A220407B7100160C69 /* Frameworks */,
 				ED15C8A320407B7100160C69 /* CopyFiles */,
-				D4DE040E82514BCB045513BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,8 +221,6 @@
 				ED387D151A602B56007E40A2 /* Sources */,
 				ED387D161A602B56007E40A2 /* Frameworks */,
 				ED387D171A602B56007E40A2 /* Resources */,
-				676CFDB0B2ACBE3322DB28CC /* [CP] Embed Pods Frameworks */,
-				208C1A3CB87DF2949645A46C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,7 +228,7 @@
 			);
 			name = "Ambly Demo";
 			productName = "Ambly Demo";
-			productReference = ED387D191A602B56007E40A2 /* Ambly Demo.app */;
+			productReference = ED387D191A602B56007E40A2 /* Kwccoin Ambly Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -251,6 +246,7 @@
 					};
 					ED387D181A602B56007E40A2 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 546F74TH4Y;
 					};
 				};
 			};
@@ -259,6 +255,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -297,36 +294,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0494E67C8978FC2D8E3B7AC7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ambly Demo TV/Pods-Ambly Demo TV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		208C1A3CB87DF2949645A46C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ambly Demo/Pods-Ambly Demo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2B13E5A573F13259B1829801 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,21 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		456F92B224EF92B3756BA4A9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ambly Demo TV/Pods-Ambly Demo TV-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		571565B7392E9A2FAC786B6A /* [CP] Check Pods Manifest.lock */ = {
@@ -378,21 +330,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		676CFDB0B2ACBE3322DB28CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ambly Demo/Pods-Ambly Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B75E91043E797F09660A23DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,21 +346,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4DE040E82514BCB045513BE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ambly Demo CLI/Pods-Ambly Demo CLI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -661,10 +583,11 @@
 			baseConfigurationReference = 47588471C354B21049EE8C52 /* Pods-Ambly Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 546F74TH4Y;
 				INFOPLIST_FILE = "Ambly Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ambly.Ambly-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwccoin.Ambly-Demo";
+				PRODUCT_NAME = "Kwccoin Ambly Demo";
 			};
 			name = Debug;
 		};
@@ -673,10 +596,11 @@
 			baseConfigurationReference = 37E132C8F625A7F334C0A9D3 /* Pods-Ambly Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 546F74TH4Y;
 				INFOPLIST_FILE = "Ambly Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ambly.Ambly-Demo";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "kwccoin.Ambly-Demo";
+				PRODUCT_NAME = "Kwccoin Ambly Demo";
 			};
 			name = Release;
 		};
